@@ -6,6 +6,8 @@ SHELL ["/bin/bash", "-c"]
 
 RUN apt update && apt upgrade -y && apt install -y \
         ros-$ROS_DISTRO-image-tools \
+        ros-$ROS_DISTRO-image-transport \
+        ros-$ROS_DISTRO-image-transport-plugins \
         ros-$ROS_DISTRO-teleop-twist-keyboard  && \
     apt-get autoremove -y && \
     apt-get clean && \
